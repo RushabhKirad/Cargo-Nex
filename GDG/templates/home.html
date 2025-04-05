@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDG - Sustainable Logistics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Transforming Logistics for a Sustainable Future</h1>
+            <p>AI-powered routing, blockchain security, and real-time tracking.</p>
+            <div class="buttons">
+                <a href="{{ url_for('vehicle_registration') }}" class="btn">Register Vehicle</a>
+                <a href="{{ url_for('tracking') }}" class="btn btn-secondary">Track Shipment</a>
+                <a href="{{ url_for('dashboard') }}" class="btn btn-green">Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <img src="{{ url_for('static', filename='images/ai-routing.png') }}" alt="AI Routing">
+            <h2>AI-Powered Routing</h2>
+            <p>Optimized routes based on terrain, fuel efficiency, and road conditions.</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='images/blockchain-security.png') }}" alt="Blockchain Security">
+            <h2>Blockchain Security</h2>
+            <p>End-to-end encrypted logistics transactions ensuring data safety.</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='images/eco-friendly.png') }}" alt="Eco-Friendly">
+            <h2>Eco-Friendly Logistics</h2>
+            <p>Reducing carbon footprint through smart vehicle selection.</p>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

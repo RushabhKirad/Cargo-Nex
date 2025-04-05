@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center">Register Your Vehicle</h2>
+    <p class="text-center">Enter vehicle details and upload required documents.</p>
+
+    <form action="/register-vehicle" method="post" enctype="multipart/form-data" class="registration-form">
+        <!-- Vehicle Number -->
+        <div class="form-group">
+            <label for="vehicle_number">Vehicle Number:</label>
+            <input type="text" id="vehicle_number" name="vehicle_number" class="form-control" required>
+        </div>
+
+        <!-- Vehicle Type -->
+        <div class="form-group">
+            <label for="vehicle_type">Vehicle Type:</label>
+            <select id="vehicle_type" name="vehicle_type" class="form-control" required>
+                <option value="truck">Truck</option>
+                <option value="lorry">Lorry</option>
+                <option value="trailer">Trailer</option>
+            </select>
+        </div>
+
+        <!-- Upload Vehicle Documents -->
+        <div class="form-group">
+            <label for="fitness_certificate">Upload Fitness Certificate:</label>
+            <input type="file" id="fitness_certificate" name="fitness_certificate" class="form-control-file" required>
+        </div>
+
+        <div class="form-group">
+            <label for="puc_certificate">Upload PUC Certificate:</label>
+            <input type="file" id="puc_certificate" name="puc_certificate" class="form-control-file" required>
+        </div>
+
+        <div class="form-group">
+            <label for="permit">Upload Vehicle Permit:</label>
+            <input type="file" id="permit" name="permit" class="form-control-file">
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">Register Vehicle</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

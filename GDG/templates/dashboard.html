@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>SmartLogix</h2>
+    <ul>
+      <li><a href="{{ url_for('home') }}"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="#"><i class="fa fa-truck"></i> Vehicles</a></li>
+      <li><a href="#"><i class="fa fa-chart-line"></i> Analytics</a></li>
+      <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Dashboard Area -->
+  <div class="main-content">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="profile">
+        <i class="fa fa-bell"></i>
+        <span>Admin</span>
+        <img src="{{ url_for('static', filename='images/user-icon.png') }}" alt="User" />
+      </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="cards">
+      <div class="card">
+        <h3>Total Vehicles</h3>
+        <p>128</p>
+      </div>
+      <div class="card">
+        <h3>Active Deliveries</h3>
+        <p>32</p>
+      </div>
+      <div class="card">
+        <h3>Avg Fuel Efficiency</h3>
+        <p>7.8 km/l</p>
+      </div>
+      <div class="card">
+        <h3>Shared Options</h3>
+        <p>6</p>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts">
+      <h3>Delivery Statistics</h3>
+      <div class="chart-box">[Graph Placeholder]</div>
+    </div>
+
+    <!-- Extra Space Section -->
+    <div class="shared-space-section">
+      <h3>Available Extra Transport Space</h3>
+      <div class="shared-card">
+        <img src="{{ url_for('static', filename='images/empty-space.jpg') }}" alt="Space">
+        <div>
+          <p><strong>Route:</strong> Pune ➝ Nashik</p>
+          <p><strong>Space:</strong> 5ft (H) × 4ft (B)</p>
+          <p><strong>Weight:</strong> 300 kg</p>
+          <p><strong>Estimated Cost:</strong> ₹3,200 (includes tolls, fuel)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
